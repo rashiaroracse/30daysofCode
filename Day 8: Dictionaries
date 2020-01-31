@@ -1,0 +1,17 @@
+n = int(input())
+phonebook = {}
+for i in range(n):
+   name,number = input().split(' ')
+   phonebook[name]=number
+   print(phonebook)
+
+while(True):
+    try:
+        queryname = input("Enter the name to be searched")
+        if queryname in phonebook:
+            print(queryname,"=",phonebook[queryname])
+            print('{}={}'.format(queryname,phonebook[queryname]))
+        else:
+            print("Not Found")
+    except EOFError:
+        break
